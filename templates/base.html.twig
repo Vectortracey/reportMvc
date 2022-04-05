@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+    <div class="site-header">
+
+        <div class="navbar">
+            <ul class = "nav-list">
+                <li class="nav-item"><a href="{{ url("home")}}">Home</a></li>
+                <li class="nav-item"><a href="{{ url("about")}}">About</a></li>
+                <li class="nav-item"><a href="{{ url("report")}}">Report</a></li>
+                <li class="nav-item"><a target="_blank" href="https://github.com/">Github</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% block body %}
+
+    {% endblock %}
+
+        <div class="site-footer">
+                <div class = "column">
+                    <p class="copyright"> © Mikael Ek | Mvc2022 @ BTH  </p>
+                </div>
+        </div>
+    </body>
+</html>

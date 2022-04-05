@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Open Sans Condensed', sans-serif;
+    line-height: 1.5rem;
+}
+
+.navbar {
+    padding-top: 1em;
+}
+
+.nav-list {
+    padding:0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    flex: 0 0 auto;
+    border-bottom: 2px solid black;
+}
+
+.nav-item {
+    padding:0;
+    margin: 0;
+    list-style: none;
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+
+.main {
+    width: 50%;
+}
+
+.nav-item a {
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    padding: 0.1em;
+    width: 5em auto;
+    height: 2em;
+    text-align: center;
+    background-color: rgb(43, 43, 43);
+    border-radius: 15px;
+    font-size: clamp(.5rem, 3vw, 1.5rem);
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    -webkit-transition: all .5s;
+       -moz-transition: all .5s;
+         -o-transition: all .5s;
+            transition: all .5s;
+}
+
+.navbar li:hover {
+    transform: scale(1.1);
+}
+
+.nav-item:last-child {
+    margin-right: auto;
+}
+
+p, td, th, dd {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+ol, ul, li {
+    padding-left: 1.5em;
+    font-size: inherit;
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+font-size: 2.8em;
+margin-bottom: 3.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-bottom: 0.6em;
+    font-weight: bold;
+}
+
+.site-footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #F6F6F6;
+    padding-top: 1%;
+    width: 100%;
+}
+
+
+.column .copyright {
+
+    text-align:center;
+    color: black;
+    height: clamp(.5rem, 3vw, 2rem);
+    margin-bottom:0;
+    font-size: clamp(0.5rem, 5vw, 0.8rem);
+}
+
