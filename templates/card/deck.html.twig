@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Deck{% endblock %}
+
+{% block content %}
+<div class="deckdiv">
+    <h1>{{ title }}</h1>
+    {% for card in deck %}
+    {% set value = card.getValue() %}
+    {% if card.getColor() == "♥" %}
+    <div>
+        <p class="card red color">{{ card.getColor() }}</p>
+        <p class="card value">{{ value }} </p>
+    </div>
+    {% elseif card.getColor() == "♣" %}
+    <div>
+        <p class="card black color">{{ card.getColor() }} </p>
+        <p class="card value">{{ value }} </p>
+    </div>
+    {% elseif card.getColor() == "♦" %}
+    <div>
+        <p class="card red color">{{ card.getColor() }} </p>
+        <p class="card value">{{ value }} </p>
+    </div>
+    {% elseif card.getColor() == "♠" %}
+    <div>
+        <p class="card black color">{{ card.getColor() }} </p>
+        <p class="card value">{{ value }} </p>
+    </div>
+    {% else %}
+        <p class="card">{{ card.getColor() }} {{ value }} </p>
+    {% endif %}
+    {% endfor %}
+</div>
+
+
+{% endblock %}

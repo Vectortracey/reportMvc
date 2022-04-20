@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Draw{% endblock %}
+
+{% block content %}
+<div class="deckdiv">
+    {% if cards != NULL %}
+    {% for card in cards %}
+        {% set value = card.getValue() %}
+        {% if card.getColor() == "♥" %}
+        <div>
+            <p class="card red color">{{ card.getColor() }} </p>
+            <p class="card value">{{ value }} </p>
+        </div>
+        {% elseif card.getColor() == "♣" %}
+        <div>
+            <p class="card black color">{{ card.getColor() }} </p>
+            <p class="card value">{{ value }} </p>
+        </div>
+        {% elseif card.getColor() == "♦" %}
+        <div>
+            <p class="card red color">{{ card.getColor() }} </p>
+            <p class="card value">{{ value }} </p>
+        </div>
+        {% elseif card.getColor() == "♠" %}
+        <div>
+            <p class="card black color">{{ card.getColor() }} </p>
+            <p class="card value">{{ value }} </p>
+        </div>
+        {% else %}
+            <p class="card">{{ card.getColor() }} {{ value }} </p>
+        {% endif %}
+    {% endfor %}
+        <h4 class="card-left">Antal kort kvar: {{ left }}st</h4>
+    {% else %}
+        <p class="card-left">Korten är slut!</p>
+    {% endif %}
+</div>
+
+
+{% endblock %}

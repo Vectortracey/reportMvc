@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
 
-html,
-body {
-  height: 100%;
-}
 
-body {
-    overflow: hidden;
-    font-family: 'Open Sans Condensed', sans-serif;
-    line-height: 1.5rem;
+
+.content {
+    margin-top: 2%;
+    min-height: 100%;
+    margin-left: 40px;
+    margin-right: 10px;
+    padding: 10px;
+    max-width: 900px;
+    margin-bottom: 8%;
 }
 
 .navbar {
@@ -33,9 +34,6 @@ body {
     margin-left: 1rem;
 }
 
-.main {
-    width: 50%;
-}
 
 .nav-item a {
     padding:0;
@@ -65,13 +63,6 @@ body {
     margin-right: auto;
 }
 
-p, td, th, dd {
-    font-family: 'Open Sans Condensed', sans-serif;
-    text-align: justify;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-}
-
 ol, ul, li {
     padding-left: 1.5em;
     font-size: inherit;
@@ -93,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background-color: #F6F6F6;
     padding-top: 1%;
@@ -110,3 +101,60 @@ h1, h2, h3, h4, h5, h6 {
     font-size: clamp(0.5rem, 5vw, 0.8rem);
 }
 
+.card {
+    min-width: fit-content;
+    border: 1px solid black;
+    max-width: 50px;
+    text-align: center;
+    padding: 1px;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.black {
+    color: #000000;
+}
+
+.heart {
+    background-color: red;
+}
+
+.color {
+    float: left;
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+.value {
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+.deckdiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.dealdiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.deckdiv h1 {
+    grid-column: 1/14;
+    justify-self: center;
+}
+
+.card-left {
+    grid-column: 1/15;
+    grid-row: 2/2;
+}
+
+.joker p{
+    color: red;
+    font-size: 20px;
+}

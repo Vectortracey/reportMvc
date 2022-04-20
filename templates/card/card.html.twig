@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Card{% endblock %}
+
+{% block content %}
+<h1>Card</h1>
+<ul>
+    <li><a href="{{ url("showDeck") }}">Deck</a></li>
+    <li><a href="{{ url("shuffleDeck") }}">Shuffle</a></li>
+    <li><a href="{{ url("showDeck2") }}">Deck with jokers</a></li>
+    <li><a href="{{ url("draw-card") }}">Draw one card</a></li>
+    <li><a href="{{ path("draw-card-number", {'numberCards': '5'}) }}">Draw more cards</a></li>
+    <li><a href="{{ path("deal-cards", {'players': '2', 'cards': '5'}) }}">Deal cards</a></li>
+    <li><a href="{{ url("json-api") }}">JSON get</a></li>
+    <li><a href="{{ url("reset") }}">Reset Deck</a></li>
+</ul>
+
+
+{% endblock %}

@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="{{ asset("favicon.ico") }}">
+        <link rel="stylesheet" href="{{ asset("css/style.css") }}"/>
     </head>
     <body>
 
@@ -15,19 +16,21 @@
                 <li class="nav-item"><a href="{{ url("about")}}">About</a></li>
                 <li class="nav-item"><a href="{{ url("report")}}">Report</a></li>
                 <li class="nav-item"><a target="_blank" href="https://github.com/">Github</a></li>
+                <li class="nav-item"><a href="/dice">Dice</a></li>
+                 <li class="nav-item"><a href="{{ url("card")}}">Card</a></li>
+
+
+
             </ul>
         </div>
 
     </div>
 
-
-    {% block content %}
-
-    {% endblock %}
-
-    {% block body %}
-
-    {% endblock %}
+        <div class="content">
+            {% block content %}
+            Default content
+            {% endblock %}
+        </div>
 
         <div class="site-footer">
                 <div class = "column">
