@@ -1,0 +1,60 @@
+{% extends "base.html.twig" %}
+
+{% block title %}21{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Vinnaren är {{ winner }}</h1>
+</div>
+<div class="deckdiv">
+    <div class="player">
+        <h4>Spelare</h4>
+    </div>
+    {% for c in cardHand %}
+    <div class="col-md-1">
+        {% if c.getColor() == "♥" or c.getColor() == "♦" %}
+        <p class="card red color">{{ c.getColor() }} </p>
+        <p class="card value">{{ c.getValue() }} </p>
+        {% else %}
+        <p class="card black color">{{ c.getColor() }} </p>
+        <p class="card value">{{ c.getValue() }} </p>
+        {% endif %}
+    </div>
+    {% endfor %}
+    <div class="sumTotal">
+        <h5>Totala summan: {{ sumPlayer }}</h5>
+    </div>
+</div>
+
+
+<div class="deckdiv">
+    <div class="bank">
+        <h4>Banken</h4>
+    </div>
+    {% for c in cardHandBank %}
+    <div class="hand">
+        {% if c.getColor() == "♥" or c.getColor() == "♦" %}
+        <p class="card red color">{{ c.getColor() }} </p>
+        <p class="card value">{{ c.getValue() }} </p>
+        {% else %}
+        <p class="card black color">{{ c.getColor() }} </p>
+        <p class="card value">{{ c.getValue() }} </p>
+        {% endif %}
+    </div>
+    {% endfor %}
+    <div class="handSum">
+        <h5>Totala summan: {{ sumBank }}</h5>
+    </div>
+</div>
+<div>
+    <form action="{{ url("start") }}">
+        <input type="submit" class="btn" value="Spela igen" />
+    </form>
+    <form action="{{ url("intro") }}">
+        <input type="submit" class="btn" value="Tillbaka" />
+    </form>
+
+</div>
+
+
+{% endblock %}

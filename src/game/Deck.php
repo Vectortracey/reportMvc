@@ -8,32 +8,28 @@ class Deck
 {
     protected $deck = array();
 
-    public function __construct($deck = null)
+    public function __construct($deck = array())
     {
+        $card = null;
         if ($deck == null) {
             foreach (array("♥", "♣", "♦", "♠") as $color) {
                 for ($x = 1; $x <= 13; $x++) {
                     if ($x == 1) {
                         $card = new Card("A", $color);
-                        $this->deck[] = $card;
                     } elseif ($x == 11) {
                         $card = new Card("J", $color);
-                        $this->deck[] = $card;
                     } elseif ($x == 12) {
                         $card = new Card("Q", $color);
-                        $this->deck[] = $card;
                     } elseif ($x == 13) {
                         $card = new Card("K", $color);
-                        $this->deck[] = $card;
-                    } else {
+                    } elseif ($x < 11) {
                         $card = new Card(strval($x), $color);
-                        $this->deck[] = $card;
                     }
+                    $deck[] = $card;
                 };
             };
-        } else {
-            $this->deck = $deck;
         }
+        $this->deck = $deck;
     }
 
     public function getDeck(): array

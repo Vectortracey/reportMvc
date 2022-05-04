@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Game{% endblock %}
+
+{% block content %}
+<h2>De olika klasserna för spelet 21/game.</h2>
+<ul>
+    <p>CardHandKlassen sparar värden för banken och spelaren.</p>
+    <p>DeckKlassen, Den loopar igenom korten och tilldelar Knekt, drottning, kung och ess samt tilldelar färg.</p>
+    <p>PlayerKlassen kommer att hålla spelarens tilldelda värde och information.</p>
+    <p>CardKlassen håller värdet för varje kort.</p>
+    <p>GameKlassen, med constructur bygger den spelets funktionalitet med spelarens värde, bankens värde och hur banken ska göra beroende på värdet som den håller efter den har dragit ett kort samt tilldelar vinnern</p>
+
+</ul>
+<h2>Uml diagram</h2>
+<img src="{{ asset("img/uml.png") }}" width="400" alt="uml">
+<h2>pseudokod</h2>
+<img src="{{ asset("img/psuedoCode.png") }}" width="400" alt="psuedoCode">
+
+
+<form action="{{ url("intro") }}">
+        <input type="submit" class="btn" value="Tillbaka" />
+    </form>
+{% endblock %}
+

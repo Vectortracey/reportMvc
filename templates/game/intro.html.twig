@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Game{% endblock %}
+
+{% block content %}
+<h1>Kortspelet 21</h1>
+
+<p>Spelets idé är att med två eller flera kort försöka uppnå det sammanlagda värdet 21, eller komma så nära som möjligt utan att överskrida 21.</p>
+<p> Essen är värda 1, kungarna 13, damerna 12, knektarna 11.</p>
+<p>Spelaren får när som helst välja att stanna.</p>
+<form action="{{ url("doc") }}">
+    <input type="submit" class="btn" value="Dokumentation" />
+</form>
+<form action="{{ url("start") }}">
+    <input type="submit" class="btn" value="Starta" />
+</form>
+
+
+
+{% endblock %}
