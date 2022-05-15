@@ -12,11 +12,11 @@ class Game
     private $bank;
     private $winner;
 
-    public function __construct()
+    public function __construct(int $sumPlayer = 0, int $sumBank = 0)
     {
         $this->deck = new Deck();
-        $this->player = new Player(1);
-        $this->bank = new Player(2);
+        $this->player = new Player(1, $sumPlayer);
+        $this->bank = new Player(2, $sumBank);
     }
 
     public function getPlayers(): string

@@ -60,7 +60,7 @@ class GameController extends AbstractController
         $session->set("game", $game);
 
         if ($sum[0] > 21) {
-            return $this->redirectToRoute('game-stop');
+            return $this->redirectToRoute('stop');
         }
         return $this->render('game/draw.html.twig', $data);
     }
