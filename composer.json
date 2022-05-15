@@ -78,20 +78,31 @@
         "symfony/polyfill-php74": "*",
         "symfony/polyfill-php80": "*"
     },
-    "scripts": {
+   "scripts": {
+
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
-         "csfix": "tools/php-cs-fixer/vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix src tests",
-         "phpunit": "XDEBUG_MODE=coverage bin/phpunit",
-        "phpcs": "tools/php-codesniffer/vendor/bin/phpcs --standard=PSR12 src",
-        "phpcbf": "tools/php-codesniffer/vendor/bin/phpcbf --standard=PSR12 src",
         "post-install-cmd": [
             "@auto-scripts"
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "csfix": "tools/php-cs-fixer/vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix src tests",
+        "phpcs": "tools/php-codesniffer/vendor/bin/phpcs --standard=PSR12 src",
+        "phpcbf": "tools/php-codesniffer/vendor/bin/phpcbf --standard=PSR12 src",
+        "phpmd": "tools/phpmd/vendor/bin/phpmd src text phpmd.xml || true",
+        "phpstan": "tools/phpstan/vendor/bin/phpstan analyse -l 3 src || true",
+        "phpcpd": "tools/phpcpd/vendor/bin/phpcpd src || true",
+        "phpdoc": "tools/phpdoc/phpdoc",
+        "phpunit": "XDEBUG_MODE=coverage bin/phpunit",
+        "lint": [
+            "@phpcpd",
+            "@phpmd",
+            "@phpstan",
+            "@phpcs"
         ]
     },
     "conflict": {
