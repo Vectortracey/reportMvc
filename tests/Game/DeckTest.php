@@ -4,10 +4,8 @@ namespace App\Card;
 
 use PHPUnit\Framework\TestCase;
 
-
 class DeckTest extends TestCase
 {
-
     public function testCreateDeckNoArguments()
     {
         $deck = new Deck();
@@ -61,7 +59,7 @@ class DeckTest extends TestCase
         $res = $deck->getDeck();
         $this->assertEquals(count($res), 49);
     }
-    
+
     public function testDrawCardNoArguments()
     {
         $deck = new Deck();
@@ -72,7 +70,4 @@ class DeckTest extends TestCase
         $res = $deck->getDeck();
         $this->assertEquals(count($res), 51);
     }
-
-
-
 }

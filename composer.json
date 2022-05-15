@@ -83,7 +83,8 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
-         "csfix": "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src",
+         "csfix": "tools/php-cs-fixer/vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix src tests",
+         "phpunit": "XDEBUG_MODE=coverage bin/phpunit",
         "phpcs": "tools/php-codesniffer/vendor/bin/phpcs --standard=PSR12 src",
         "phpcbf": "tools/php-codesniffer/vendor/bin/phpcbf --standard=PSR12 src",
         "post-install-cmd": [

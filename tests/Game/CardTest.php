@@ -6,7 +6,6 @@ use PHPUnit\Framework\TestCase;
 
 class CardTest extends TestCase
 {
-
     public function testCreateCard()
     {
         $card = new Card("9", "♥");

@@ -4,10 +4,8 @@ namespace App\Card;
 
 use PHPUnit\Framework\TestCase;
 
-
 class GameTest extends TestCase
 {
-
     public function testSetWinnerToPlayer()
     {
         $game = new Game(21, 19);

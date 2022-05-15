@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
  */
 class PlayerTest extends TestCase
 {
-
     public function testGetEmptyHand()
     {
         $player = new Player(1);
@@ -82,7 +81,4 @@ class PlayerTest extends TestCase
         $cardArray = $res->getCardHand();
         $this->assertCount(2, $cardArray);
     }
-
-
-
 }

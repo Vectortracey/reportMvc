@@ -8,10 +8,8 @@ namespace App\Card;
 
 use App\Card\CardHand;
 
-
 class Player
 {
-
     private int $playerId;
 
 

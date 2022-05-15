@@ -6,7 +6,6 @@ use PHPUnit\Framework\TestCase;
 
 class DiceTest extends TestCase
 {
-
     public function testCreateDice()
     {
         $die = new Dice();

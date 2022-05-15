@@ -6,8 +6,6 @@ use PHPUnit\Framework\TestCase;
 
 class CardHandTest extends TestCase
 {
-
-
     public function testGetCardHandWithCards()
     {
         $cardHand = new CardHand();
@@ -37,5 +35,4 @@ class CardHandTest extends TestCase
         $res = $cardHand->getCardHand();
         $this->assertEquals($res, []);
     }
-
 }
