@@ -3,9 +3,9 @@
 {% block title %}{{ book.GetTitle() }}{% endblock %}
 {% block content %}
 
-<div class="container single">
+<div>
     <img src="{{ book.getImage() }}" alt="{{ book.getTitle() }}" width="400">
-    <div class="oneBook">
+    <div>
         <h2>{{ book.getTitle() }}</h2>
         <h5>{{ book.getAuthor() }}</h5>
         <p>ISBN: {{ book.getISBN() }}</p>
