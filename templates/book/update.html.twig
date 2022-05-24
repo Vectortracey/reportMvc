@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Update book{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Update book</h1>
+    <form action="{{ path('book_update_by_id', {'id': book.getId()}) }}"  method="post">
+<fieldset class="form-group">
+    <div>
+        <label class="margin">Title</label>
+        <input type="text" class="form-control" name="title" value="{{ book.getTitle() }}">
+    </div>
+    <div>
+        <label class="margin">Author</label>
+        <input type="text" class="form-control" name="author" value="{{ book.getAuthor() }}">
+    </div>
+    <div>
+        <label class="margin">ISBN</label>
+        <input type="text" class="form-control" name="isbn" value="{{ book.getISBN() }}">
+    </div>
+    <div>
+        <label class="margin">Image</label>
+        <input type="text" class="form-control" name="image_url" value="{{ book.getImage() }}">
+    </div>
+    <input type="submit"class="margin btn btn-success btn-lg btn-block" value="Update">
+</fieldset>
+    </form>
+</div>
+{% endblock %}

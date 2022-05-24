@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Library{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Mega Library</h1>
+    <div>
+    <form action="{{ url("create_book") }}">
+        <input type="submit" class="btn" value="Add new book" />
+    </form>
+       <form action="{{ url("show_all_books") }}">
+        <input type="submit" class="btn" value="Show all books" />
+    </form>
+    </div>
+</div>
+{% endblock %}
