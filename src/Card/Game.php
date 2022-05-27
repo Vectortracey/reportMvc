@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file contains the class Game and is written by me, Agnes Rodhe.
+ * class Game
  */
 
 namespace App\Card;
@@ -10,7 +10,7 @@ use App\Card\Player;
 use App\Card\Deck;
 
 /**
- * The class Game represents a game of 21.
+ *game of 21.
  */
 class Game
 {
@@ -61,7 +61,7 @@ class Game
     }
 
     /**
-     * This function draws a card from the deck and add it to the player1 card hand.
+     *  draws a card from the deck and add it to the player1 card hand.
      */
     public function drawCardPlayer()
     {
@@ -70,7 +70,7 @@ class Game
     }
 
     /**
-     * This function returns the player1 card hand as an array.
+     * returns the player1 card hand as an array.
      */
     public function getHandPlayer(): array
     {
@@ -79,7 +79,7 @@ class Game
     }
 
     /**
-     * This function draws card by card and add to
+     * draws card by card and add to
      * the bankplayer card hand until the sum is 17 or more. Returns the card hand of the bankplayer.
      */
     public function getHandBank(): array
@@ -97,7 +97,7 @@ class Game
     }
 
     /**
-     * This function compare the sum of the two players hands and set the winner.
+     * compare the sum of the two players hands and set the winner.
      */
     public function setWinner()
     {
@@ -113,7 +113,7 @@ class Game
     }
 
     /**
-     * This function returns the sum of the cards for both the player1 and the bankplayer as an array.
+     * returns the sum of the cards for both the player1 and the bankplayer as an array.
      */
     public function getSum(): array
     {
@@ -131,7 +131,7 @@ class Game
     }
 
     /**
-     * This function is to get winner
+     * get winner
      */
     public function getWinner(): string
     {

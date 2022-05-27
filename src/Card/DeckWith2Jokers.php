@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Card;
-
+/**
+ * adds joker to deck
+ */
 class DeckWith2Jokers extends Deck
 {
     private $joker = "🃟";

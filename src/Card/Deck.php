@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file contains the class Game and is written by me, Agnes Rodhe.
+ * class Game
  */
 
 namespace App\Card;
@@ -9,7 +9,7 @@ namespace App\Card;
 use App\Card\Card;
 
 /**
- * The class Deck represents a deck of cards.
+ * class Deck
  */
 class Deck
 {
@@ -41,7 +41,7 @@ class Deck
     }
 
     /**
-     * This function returns the deck as an array
+     * returns the deck as an array
      */
     public function getDeck(): array
     {
@@ -49,7 +49,7 @@ class Deck
     }
 
     /**
-     * This function shuffle the deck and then return the deck as an array
+     * shuffle the deck and then return the deck as an array
      */
     public function shuffleDeck(): array
     {
@@ -58,7 +58,7 @@ class Deck
     }
 
     /**
-     * This function shuffle the deck and then draws the amount of cards as the argument sent in says.
+     * shuffle the deck and then draws the amount of cards as the argument sent in says.
      * If no argument is sent in, only one card is drawn from the deck.
      * Return value is an array with the card/cards.
      */

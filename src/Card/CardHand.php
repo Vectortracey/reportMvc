@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file contains the class Game and is written by me, Agnes Rodhe.
+ * class game
  */
 
 namespace App\Card;
@@ -9,7 +9,7 @@ namespace App\Card;
 use App\Card\Card;
 
 /**
- * The class Game represents a game of 21.
+ * class for 21
  */
 class CardHand
 {
@@ -21,7 +21,7 @@ class CardHand
     private $cardHand = [];
 
     /**
-     * This function takes a card-object as a parameter and add the card to the $cardHand-array.
+     * takes a card-object as a parameter and add the card to the $cardHand-array.
      *
      * @param Card $card    A card-object
      */
@@ -31,7 +31,7 @@ class CardHand
     }
 
     /**
-     * This function returns the cardhand as an array.
+     * returns the cardhand as an array.
      */
     public function getCardHand(): array
     {

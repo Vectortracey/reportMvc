@@ -15,6 +15,14 @@ class GameTest extends TestCase
         $this->assertEquals("Spelaren", $res);
     }
 
+    public function testSetWinnerToPlayerTwo()
+    {
+        $game = new Game(21, 5);
+
+        $game->setWinner();
+        $res = $game->getWinner();
+        $this->assertEquals("Spelaren", $res);
+    }
 
     public function testSetWinnerToBank()
     {
@@ -26,10 +34,30 @@ class GameTest extends TestCase
         $this->assertEquals("Banken", $res);
     }
 
+    public function testSetWinnerToBankTwo()
+    {
+        $game = new Game(5, 21);
+        $this->assertInstanceOf("\App\Card\Game", $game);
+
+        $game->setWinner();
+        $res = $game->getWinner();
+        $this->assertEquals("Banken", $res);
+    }
+
 
     public function testSetWinnerToNoOne()
     {
         $game = new Game(30, 30);
+        $this->assertInstanceOf("\App\Card\Game", $game);
+
+        $game->setWinner();
+        $res = $game->getWinner();
+        $this->assertEquals("oavgjort", $res);
+    }
+
+    public function testSetWinnerToNoOneTwo()
+    {
+        $game = new Game(22, 22);
         $this->assertInstanceOf("\App\Card\Game", $game);
 
         $game->setWinner();

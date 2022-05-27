@@ -1,13 +1,13 @@
 <?php
 
 /**
- * This file contains the class Card and is written by me, Agnes Rodhe.
+ * class Card
  */
 
 namespace App\Card;
 
 /**
- * The class Card represents a playing card.
+ *  class Card
  */
 class Card
 {
@@ -32,7 +32,7 @@ class Card
     }
 
     /**
-     * This function returns the color of the card as a string
+     * returns the color of the card as a string
      */
     public function getColor(): string
     {
@@ -40,7 +40,7 @@ class Card
     }
 
     /**
-     * This function returns the value of the card as a string
+     * returns the value of the card as a string
      */
     public function getValue(): string
     {

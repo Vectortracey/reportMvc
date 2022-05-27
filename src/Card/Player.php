@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file contains the class Game and is written by me, Agnes Rodhe.
+ * class Game
  */
 
 namespace App\Card;
@@ -44,7 +44,7 @@ class Player
     }
 
     /**
-     * This function returns the players id as an integer
+     * returns the players id as an integer
      */
     public function getPlayerId(): int
     {
@@ -52,7 +52,7 @@ class Player
     }
 
     /**
-     * This function returns the players cardhand as a CardHand-object.
+     * returns the players cardhand as a CardHand-object.
      */
     public function getHand()
     {
@@ -60,7 +60,7 @@ class Player
     }
 
     /**
-     * This function takes a Card as an argument and if the the private $cards is empty
+     * takes a Card as an argument and if the the private $cards is empty
      * creates a cardHand-object. Then the card is added to the players CardHand.
      *
      * @param Card $card        A card-object to add to the hand
@@ -74,7 +74,7 @@ class Player
     }
 
     /**
-     * This function sum all the values of the cards in the cardhand and return the sum as an integer.
+     * sum all the values of the cards in the cardhand and return the sum as an integer.
      */
     public function getSum(): int
     {

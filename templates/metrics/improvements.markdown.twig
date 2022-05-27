@@ -5,3 +5,37 @@ De förbättringar jag tänker försöker ge mig på är att minska komplexitete
 <img src="img/gamecontroller.png?q=40" alt="coverage" width="800"/>
 \
 <img src="img/gameochdeck.png?q=40" alt="coverage" width="800"/>
+
+
+Efter översikt över card klasserna, lagt till kommentarer och brytit ut så vart det en något betydande skilland för phpmetric där både cirklar har gått från röda till gula och komplexiteten har minskat lite
+
+<img src="img/overview1.png?q=40" alt="coverage" width="800"/>
+\
+före
+
+<img src="img/overview2.png?q=40" alt="coverage" width="800"/>
+
+\
+Efter
+
+Även scrutinizer visade bättre resultat, men även för jag valt att exludera delar av programmet som inte synkronizer behöver kolla, vilket förklarade de långa tiderna för generera rapport men även antalet varningar.
+
+Nu kör scrutinizer de filer som vi jobbar med.
+
+<img src="img/scrutinizer2.png?q=40" alt="coverage" width="400"/>
+\
+Före
+\
+<img src="img/scrutinizer3.png?q=40" alt="coverage" width="400"/>
+\
+Efter
+\
+Jag lyckades även få något lägre komplexitet för Deck och Game samt även 100% test coverage för Game klassen
+
+<img src="img/gameochdeck.png?q=40" alt="coverage" width="800"/>
+\
+före
+\
+<img src="img/gameochdeck2.png?q=40" alt="coverage" width="800"/>
+\
+Efter
