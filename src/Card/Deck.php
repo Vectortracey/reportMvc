@@ -1,16 +1,14 @@
 <?php
 
-/**
- * This file contains the class Game and is written by me, Agnes Rodhe.
- */
-
 namespace App\Card;
 
 use App\Card\Card;
 
 class Deck
 {
+
     protected $deck = array();
+
 
     public function __construct($deck = array())
     {
@@ -27,6 +25,7 @@ class Deck
         }
         $this->deck = $deck;
     }
+
 
     public function getDeck(): array
     {

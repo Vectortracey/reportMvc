@@ -9,15 +9,21 @@ namespace App\Card;
 use App\Card\Player;
 use App\Card\Deck;
 
+
 class Game
 {
+
     private $deck;
+
 
     private $player1;
 
+
     private $bank;
 
-    private $winner = "Ingen har vunnit!";
+
+    private $winner = "oavgjort";
+
 
     public function __construct(int $sumPlayer = 0, int $sumBank = 0)
     {
@@ -62,11 +68,11 @@ class Game
         $bankSum = $this->bank->getSum();
         $playerSum = $this->player1->getSum();
         if ($bankSum > $playerSum && $bankSum <= 21) {
-            $this->winner = "Banken vann!";
+            $this->winner = "Banken";
         } elseif ($playerSum <= 21) {
-            $this->winner = "Du vann!";
+            $this->winner = "Spelaren";
         } elseif ($playerSum > 21 && $bankSum > 21) {
-            $this->winner = "Ingen har vunnit!";
+            $this->winner = "oavgjort";
         };
     }
 
@@ -75,7 +81,7 @@ class Game
         $sumAll = array();
         $sumPlayer1 = $this->player1->getSum();
         if ($sumPlayer1 > 21) {
-            $this->winner = "Banken vann!";
+            $this->winner = "Banken";
         };
         array_push($sumAll, $sumPlayer1);
         if ($this->bank->getHand() != null) {
@@ -84,7 +90,7 @@ class Game
         };
         return $sumAll;
     }
-
+    
     public function getWinner(): string
     {
         return $this->winner;

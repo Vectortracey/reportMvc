@@ -102,6 +102,7 @@
             "@putenv XDEBUG_MODE=coverage",
             "php vendor/bin/phpunit"
         ],
+        "phpunittwo": "XDEBUG_MODE=coverage vendor/bin/phpunit",
         "lint": [
             "@phpcpd",
             "@phpmd",
