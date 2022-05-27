@@ -9,22 +9,42 @@ namespace App\Card;
 use App\Card\Player;
 use App\Card\Deck;
 
-
+/**
+ * The class Game represents a game of 21.
+ */
 class Game
 {
-
+    /**
+     * Deck parameter
+     *
+     * @var Deck
+     */
     private $deck;
 
-
+    /**
+     * Player1 parameter
+     *
+     * @var Player
+     */
     private $player1;
 
-
+    /**
+     * Bank parameter
+     *
+     * @var Player
+     */
     private $bank;
 
-
+    /**
+     * Winner parameter
+     *
+     * @var string
+     */
     private $winner = "oavgjort";
 
-
+    /**
+     * Create new instances of the variables deck, player1 and bank.
+     */
     public function __construct(int $sumPlayer = 0, int $sumBank = 0)
     {
         $this->deck = new Deck();
@@ -32,23 +52,36 @@ class Game
         $this->bank = new Player(2, $sumBank);
     }
 
+    /**
+     * Return the deck as an object.
+     */
     public function getDeck(): Deck
     {
         return $this->deck;
     }
 
+    /**
+     * This function draws a card from the deck and add it to the player1 card hand.
+     */
     public function drawCardPlayer()
     {
         $card = $this->deck->draw();
         $this->player1->addToHand($card[0]);
     }
 
+    /**
+     * This function returns the player1 card hand as an array.
+     */
     public function getHandPlayer(): array
     {
         $hand = $this->player1->getHand();
         return $hand->getCardHand();;
     }
 
+    /**
+     * This function draws card by card and add to
+     * the bankplayer card hand until the sum is 17 or more. Returns the card hand of the bankplayer.
+     */
     public function getHandBank(): array
     {
         if (count($this->getSum()) < 2) {
@@ -63,6 +96,9 @@ class Game
         return $hand->getCardHand();;
     }
 
+    /**
+     * This function compare the sum of the two players hands and set the winner.
+     */
     public function setWinner()
     {
         $bankSum = $this->bank->getSum();
@@ -76,6 +112,9 @@ class Game
         };
     }
 
+    /**
+     * This function returns the sum of the cards for both the player1 and the bankplayer as an array.
+     */
     public function getSum(): array
     {
         $sumAll = array();
@@ -90,7 +129,10 @@ class Game
         };
         return $sumAll;
     }
-    
+
+    /**
+     * This function is to get winner
+     */
     public function getWinner(): string
     {
         return $this->winner;
