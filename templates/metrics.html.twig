@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Metrics{% endblock %}
+
+{% block content %}
+{% apply markdown_to_html %}
+Metrics
+======
+
+{{ include ('metrics/introduction.markdown.twig')|markdown_to_html }}
+{{ include ('metrics/theFourC.markdown.twig')|markdown_to_html }}
+{{ include ('metrics/complexity.markdown.twig')|markdown_to_html }}
+{{ include ('metrics/cohesion.markdown.twig')|markdown_to_html }}
+{{ include ('metrics/coupling.markdown.twig')|markdown_to_html }}
+{{ include ('metrics/phpmetrics.markdown.twig')|markdown_to_html }}
+{{ include ('metrics/scrutinizer.markdown.twig')|markdown_to_html }}
+{{ include ('metrics/improvements.markdown.twig')|markdown_to_html }}
+{% endapply %}
+
+
+
+{% endblock %}

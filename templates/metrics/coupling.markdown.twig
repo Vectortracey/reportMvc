@@ -1,0 +1,11 @@
+### Coupling
+
+Coupling är ett mätvärde för att se till vilken grad moduler är interberoende av varandra.
+Det finns två olika typer av coupling för phpmetrics, den första är Afferent coupling som är en indikation på hur många andra klasser som är påverkade av klassen.
+Den andra är Efferent coupling som är ett värde som visar hur många andra klasser som den berörda klassen använder sig av.
+
+En klass med ett högt afferent coupling värde påverkar i stor grad andra klasser, medans ett högt Efferent coupling värde visar hur många klasser den berörda klassen använder sig utav.
+
+<img src="img/coupling.png?q=40" alt="cohesion" width="600"/>
+\
+Exempel från phpmetrics där tex Card\Deck används i stor grad i andra klasser, medans Controller\Cardcontroller använder sig av flera klasser, vilket är rimligt.

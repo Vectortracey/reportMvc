@@ -11,7 +11,7 @@ class Card
     {
         $this->value = $cardValue;
         $this->color = $cardColor;
-        // $this->picture = $cardPicture;
+        
     }
 
     public function getColor(): string

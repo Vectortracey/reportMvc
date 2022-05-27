@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This file contains the class Game and is written by me, Agnes Rodhe.
+ */
+
 namespace App\Card;
 
 use App\Card\Player;
@@ -8,23 +12,21 @@ use App\Card\Deck;
 class Game
 {
     private $deck;
-    private $player;
+
+    private $player1;
+
     private $bank;
-    private $winner;
+
+    private $winner = "Ingen har vunnit!";
 
     public function __construct(int $sumPlayer = 0, int $sumBank = 0)
     {
         $this->deck = new Deck();
-        $this->player = new Player(1, $sumPlayer);
+        $this->player1 = new Player(1, $sumPlayer);
         $this->bank = new Player(2, $sumBank);
     }
 
-    public function getPlayers(): string
-    {
-        return "[{$this->player->getPlayerId()}]";
-    }
-
-    public function getDeck()
+    public function getDeck(): Deck
     {
         return $this->deck;
     }
@@ -32,14 +34,13 @@ class Game
     public function drawCardPlayer()
     {
         $card = $this->deck->draw();
-        $this->player->addToHand($card[0]);
+        $this->player1->addToHand($card[0]);
     }
 
     public function getHandPlayer(): array
     {
-        $hand = $this->player->getHand();
-        return $hand->getCardHand();
-        ;
+        $hand = $this->player1->getHand();
+        return $hand->getCardHand();;
     }
 
     public function getHandBank(): array
@@ -53,31 +54,30 @@ class Game
             $this->bank->addToHand($card[0]);
         };
         $hand = $this->bank->getHand();
-        return $hand->getCardHand();
-        ;
+        return $hand->getCardHand();;
     }
 
     public function setWinner()
     {
         $bankSum = $this->bank->getSum();
-        $playerSum = $this->player->getSum();
+        $playerSum = $this->player1->getSum();
         if ($bankSum > $playerSum && $bankSum <= 21) {
-            $this->winner = $this->bank;
+            $this->winner = "Banken vann!";
         } elseif ($playerSum <= 21) {
-            $this->winner = $this->player;
+            $this->winner = "Du vann!";
         } elseif ($playerSum > 21 && $bankSum > 21) {
-            $this->winner = null;
+            $this->winner = "Ingen har vunnit!";
         };
     }
 
     public function getSum(): array
     {
         $sumAll = array();
-        $sumPlayer = $this->player->getSum();
-        if ($sumPlayer > 21) {
-            $this->winner = $this->bank;
+        $sumPlayer1 = $this->player1->getSum();
+        if ($sumPlayer1 > 21) {
+            $this->winner = "Banken vann!";
         };
-        array_push($sumAll, $sumPlayer);
+        array_push($sumAll, $sumPlayer1);
         if ($this->bank->getHand() != null) {
             $sumBank = $this->bank->getSum();
             array_push($sumAll, $sumBank);
@@ -87,12 +87,6 @@ class Game
 
     public function getWinner(): string
     {
-        $winnerMessage = "Spelaren";
-        if ($this->winner == null) {
-            $winnerMessage = "oavgjort";
-        } elseif ($this->winner == $this->bank) {
-            $winnerMessage = "Banken";
-        };
-        return $winnerMessage;
+        return $this->winner;
     }
 }
