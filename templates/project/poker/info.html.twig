@@ -1,0 +1,20 @@
+{% include "incl/projheader.html.twig" %}
+<body class="body-pr-color">
+    <section class="poker-info">
+
+
+
+
+
+        <h2>Välkommen till mitt texas hold'hem spel i ramverket symfony!<h2>
+        <p>I det här spelet så spelar du mot datorn, du börjar med 1000 credits och får satsa 50 credits i taget mot datorn</p>
+        <p>Det dras automatiskt 50 credits från ditt konto, väljer du att fortsätta spela med dina kort dras det ytterligare 50 credits.</p>
+        <p>vinnet du får du tillbaka det du satsat multiplicerat med poängvärdet, blir det oavgjort får du tillbaka det du satsat.</p>
+
+
+        <a class="startbtn" href="{{ path("poker-game") }}">Lets go!</a>
+        <a class="startbtn2" href="{{ path("project-home") }}">Return</a>
+    </section>
+
+    {% include "incl/projfooter.html.twig" %}
+</body>

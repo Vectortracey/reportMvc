@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="{{ asset("favicon.ico") }}">
+        <link rel="stylesheet" href="{{ asset("css/style.css") }}"/>
+        <link rel="stylesheet" href="{{ asset("css/poker.css") }}"/>
+        <link rel="stylesheet" href="{{ asset("css/pokerchip.css") }}"/>
+
+    </head>
+    <body>
+
+    <div class="site-header">
+        <div class="navbar">
+                    <ul class = "nav-list">
+                        <li class="nav-item"><a href="{{ url("project-home")}}">Home</a></li>
+                        <li class="nav-item"><a href="{{ url("project-about")}}">About</a></li>
+                        <li class="nav-item"><a href="{{ url("poker-info")}}">Poker</a></li>
+
+
+
+
+
+                    </ul>
+                </div>
+
+    </div>
+

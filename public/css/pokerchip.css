@@ -1,0 +1,52 @@
+.pokerchip {
+    margin: 1em;
+    position: relative;
+    display: inline-block;
+    width: 81px;
+    height: 81px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5), 0 0 3px 0 rgba(0, 0, 0, 0.4) inset;
+    border-radius: 50%;
+    background-size: 151px 151px;
+    background-position: center center;
+}
+
+.pokerchip:before {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    top: 9px;
+    left: 9px;
+    background-position: center center;
+}
+
+.pokerchip:after {
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    font: bold 25px/45px Arial;
+    white-space: pre;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.3), 1px 1px 0px rgba(255, 255, 255, 0.2);
+}
+
+.blue {
+    background-image: linear-gradient(0deg, transparent 0, transparent 67.5px, #fff 67.5px, #fff 83.5px, transparent 83.5px, transparent 151px), linear-gradient(60deg, transparent 0, transparent 97.4304px, #fff 97.4304px, #fff 113.4304px, transparent 113.4304px, transparent 151px), linear-gradient(120deg, #000099 0, #000099 97.4304px, #fff 97.4304px, #fff 113.4304px, #000099 113.4304px, #000099 151px);
+}
+
+.blue:before {
+    border: 8px solid #000099;
+    background-image: linear-gradient(0deg, transparent 0, transparent 69.5px, #EBEBEB 69.5px, #EBEBEB 81.5px, transparent 81.5px, transparent 151px), linear-gradient(30deg, transparent 0, transparent 98.7104px, #EBEBEB 98.7104px, #EBEBEB 110.7104px, transparent 110.7104px, transparent 151px), linear-gradient(60deg, transparent 0, transparent 98.7104px, #EBEBEB 98.7104px, #EBEBEB 110.7104px, transparent 110.7104px, transparent 151px), linear-gradient(90deg, transparent 0, transparent 69.5px, #EBEBEB 69.5px, #EBEBEB 81.5px, transparent 81.5px, transparent 151px), linear-gradient(120deg, transparent 0, transparent 98.7104px, #EBEBEB 98.7104px, #EBEBEB 110.7104px, transparent 110.7104px, transparent 151px), linear-gradient(150deg, #00016C 0, #00016C 98.7104px, #EBEBEB 98.7104px, #EBEBEB 110.7104px, #00016C 110.7104px, #00016C 151px);
+}
+
+.blue:after {
+    content: "50";
+    background: #000099;
+    color: #00016C;
+}

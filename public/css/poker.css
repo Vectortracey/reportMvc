@@ -1,0 +1,328 @@
+.main-poker h1, h2, h3{
+    color: white
+}
+
+.project-home {
+    min-height: 850px;
+    width: 1200px;
+    margin: auto;
+}
+
+.project-about {
+    width: 1600px;
+    min-height: 1100px;
+    margin: auto;
+}
+
+.poker-info {
+    height: 400px;
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #414141;
+    border-radius: 10px;
+    color: black;
+}
+
+.poker-info h2{
+    font-size: 25px;
+}
+
+.poker-info p{
+    font-size: 20px;
+}
+
+.startbtn {
+    border: 1px solid black;
+    background: blue;
+    padding: 15px 30px 15px 30px;
+    border-radius: 12px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.startbtn2 {
+    border: 1px solid black;
+    background: green;
+    padding: 15px 30px 15px 30px;
+    border-radius: 12px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.poker-table {
+    margin: auto;
+    margin-bottom: 50px;
+    background: rgb(126, 184, 126);;
+    width: 1600px;
+    height: 900px;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+}
+
+.main-poker {
+    order: 2;
+    width: 70%;
+    margin-right: 200px;
+}
+
+.poker-title {
+    text-align: center;
+    font-size: 40px;
+}
+
+.dealer-section {
+    height: 25%;
+}
+
+.board-section {
+    height: 25%;
+    margin-top: 25;
+}
+
+.board {
+    padding-top: 20px;
+}
+
+.result {
+    height: 15%;
+    font-size: 40px;
+}
+
+.flash {
+    padding-top: 40px;
+}
+
+.div-card {
+    height: 200px;
+}
+
+.deck-section {
+    width: 1200px;
+    margin: auto;
+}
+.deck {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-display {
+    border: 1px solid black;
+    background: white;
+    height: 150px;
+    width: 100px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.suite-right,
+.value-right {
+    margin-right: 9px;
+    transform: rotate(-180deg);
+}
+
+
+.suite-main {
+    font-size: 80px;
+    text-align: center;
+    height: 68px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.value-left,
+.suite-left {
+    margin-left: 9px;
+}
+
+.value-left {
+    margin-top: 5px;
+}
+
+.♠,
+.♣ {
+    color: black;
+}
+
+.♦,
+.♥ {
+    color: red;
+}
+.♠.♥.♣.♦ {
+    color: black;
+}
+.main-♠.♥.♣.♦ {
+    font-size: 24px;
+    width: 50px;
+    margin: auto;
+    padding-top: 5px;
+    color: black;
+}
+
+.poker-card {
+    justify-content: center;
+}
+
+.left-card{
+    margin-left: -70px;
+}
+
+.right-card{
+    margin-right: -70px;
+}
+
+.main-card {
+    margin-right: 2px;
+}
+
+input {
+    width: 100px;
+    height: 35px;
+}
+
+.card-backside-background {
+    background: #2D6748;
+}
+
+.poker-div-card {
+    height: 162px;
+}
+.player-section {
+    margin: auto;
+}
+
+.pay-section {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: 280px;
+    height: 120px;
+    justify-content: space-between;
+}
+
+.button-options {
+    width: 150px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: white;
+    font-size: large;
+}
+
+.button-options:hover {
+    background: blue;
+}
+
+.button-pay {
+    border-radius: 100%;
+    height: 106px;
+    width: 106px;
+    background: none;
+    border: 3px solid white;
+    margin: auto;
+    color: white;
+}
+
+.button-pay:hover {
+    background: blue;
+}
+
+.button-pay-div {
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    background: none;
+    border: 3px solid white;
+    margin: auto;
+}
+
+
+.player-left {
+    background:  rgb(126, 184, 126);;;
+    height: 400px;
+    bottom: 0;
+}
+
+.player-score-board {
+    width: 150px;
+    height: 80px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-bottom: 2px;
+    padding-bottom: 5px;
+}
+
+.player-score-board h2 {
+    padding-top: 8px;
+}
+
+.player-score-board h2{
+    color: white;
+}
+
+.player-score-board h3{
+    color: white;
+}
+
+.balanceWinContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
+}
+
+.balance,
+.win {
+    width: 150px;
+    height: 80px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding-bottom: 5px;
+}
+
+.balance h3,
+.win h3 {
+    font-size: 15px;
+    color: white;
+}
+
+.balance p,
+.win p {
+    font-size: 15px;
+    color: white;
+}
+
+.backside {
+    padding-top: 1.5px;
+    border: 2px solid black;
+    background-image: url("../../img/cardbackside.png");
+    background-size: cover;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.flash {
+    text-align: center;
+    height: 110px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    position: absolute;
+    width: 300px;
+    color: blue;
+    font-size: 22px;
+}
+
+.betsize {
+    color:white
+}

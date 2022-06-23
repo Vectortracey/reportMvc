@@ -1,0 +1,33 @@
+{% include "incl/projheader.html.twig" %}
+<body>
+    <section class="project-about">
+    <div class="project-container">
+        <div class="project-main">
+            <div class="about-game">
+                <h1>Projekt</h1>
+
+                <p>Som projekt valde jag ett texas hold'em kortspel där spelaren spelar mot datorn.</p>
+
+                <p>När spelet börjar så får banken / datorn 2 kort och spelaren 2 kort, 3 kort placeras ut och spelaren får välja att antingen fortsätta eller lägga ned korten.</p>
+
+                <p>Kortens poäng beräknas efter korten på handen mot korten som ligger på bordet och sedan se vad det totala värdet blir.</p>
+                <p>Om spelaren vinner får denna tillbaka sina 50 credits samt gånger vad värdet på poängen blir.</p>
+                <p>Om det blir oavgjort så får spelaren tillbaka sina pengar / credits.</p>
+
+
+                <h1>Kodkvallite</h1>
+                <p>Likt tidigare kursmoment så har jag tagit hjälp av scrutinizer och phpmetrics för att se över koden om det finns brister och således förbättringar.</p>
+                <p>Med hjälp av dessa fick jag se hur jag kunde bryta upp några metoder för att få ned komplexitetetn i projektet och de klasser jag har.</p>
+                <p>Här finns det fortfarande rum för förbättring men jag anser att koden är tillräckligt bra för den nivå jag valt att lägga mig på i detta projekt.</p>
+
+            </div>
+            <h1>Länkar</h1>
+            <li><a href="https://github.com/Vectortracey/reportMvc">GitHub</a></li>
+            <li><a href="https://scrutinizer-ci.com/g/Vectortracey/reportMvc/">Scrutinizer</a></li>
+            <li><a href="https://www.student.bth.se/~miek19/dbwebb-kurser/mvc/me/report/docs/api/index.html/">PhpDoc</a></li>
+            <li><a href="https://www.student.bth.se/~miek19/dbwebb-kurser/mvc/me/report/docs/metrics/index.html">PhpMetrics</a></li>
+            </div>
+    </div>
+    </section>
+    {% include "incl/projfooter.html.twig" %}
+</body>

@@ -1,0 +1,15 @@
+{% include "incl/projheader.html.twig" %}
+<body>
+    <section class="project-home">
+    <h1>Mvc Projekt</h1>
+    <p>Jag har gjort ett texas hold'em kort spel. För att läsa mer kring spelets regler, klicka på about. Annars är det fritt fram att köra!</p>
+    <div class="navbar">
+        <ul class = "nav-list2">
+            <li class="nav-item"><a href="{{ url("home")}}">Return home</a></li>
+            <li class="nav-item"><a href="{{ url("poker-info")}}">Start poker game</a>
+            <li class="nav-item"><a href="{{ url("project-about")}}">About poker</a></li>
+        </ul>
+    </div>
+    </section>
+    {% include "incl/projfooter.html.twig" %}
+</body>
