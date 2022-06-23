@@ -51,7 +51,7 @@ class PokerControllerTwig extends AbstractController
         ManagerRegistry $doctrine
     ): Response {
         $die = $session->get("poker") ?? new Poker();
-        $rules = new PokerRules;
+        $rules = new PokerRules();
         $entityManager = $doctrine->getManager();
         $player = $entityManager->getRepository(Player::class)->find(1);
         $data = [

@@ -75,7 +75,8 @@ class Game
     public function getHandPlayer(): array
     {
         $hand = $this->player1->getHand();
-        return $hand->getCardHand();;
+        return $hand->getCardHand();
+        ;
     }
 
     /**
@@ -93,7 +94,8 @@ class Game
             $this->bank->addToHand($card[0]);
         };
         $hand = $this->bank->getHand();
-        return $hand->getCardHand();;
+        return $hand->getCardHand();
+        ;
     }
 
     /**

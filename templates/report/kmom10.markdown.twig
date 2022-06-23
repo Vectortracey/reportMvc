@@ -1,5 +1,25 @@
 Kmom10
 =====
 
-Hur uppfattade du verktyget phpmetrics och fann du några särskilda bitar mer värdefulla än andra? Var det några särskilda metrics eller bilder du uppskattade?
 
+KRAV 1-3
+
+För dessa krav valde jag att se till tidigare moment med card och vidare till ORM för att se till hur jag skulle kunna bygga upp ett texas hold'em kortspel.
+Som tur finns det en hel del tidigare dokumentation och tips kring uppbyggande av kortspel och därbiland texas hold'em.
+
+Till spelet skapade jag 2 controllers, en för projectet i sig och en för själva pokerspelet för att bryta ut det och göra det lättare att hantera och bygga vidare på.
+
+För själva poker spelet bröt jag ut det till fyra olika filer där jag hanterar korten, kortleken, reglerna och slutligen själva spelet.
+
+Problemet är just att filen som håller alla regler vart skrämmande lång och jag ser inte riktigt hur jag ska kunna bryta ut dessa metoder på ett bra sätt så jag har överseende när det kommer till den klassen.
+
+Det hela flöt på rätt bra men där jag stötte på problem var för ORM databasen där jag fick något problem som gjorde att jag inte kunna skapa den tabellen jag ville ha för spelaren där jag hanterar och uppdaterar värdet för spelaren.
+Det slutade med djupdykning på stackoverflow och visade sig vara min autoload som låg och caschade vilket resulterade till att jag inte kunde skapa den nya entity klassen.
+
+Vidare för kodtestning ställde jag in linterns på nivå 3 vilket var en lagom nivå för tidsramen för detta projekt.
+
+
+Projektet gick bra att genomföra även om det blivit lite utdraget nu då fokus legat på examensarbetet men jag är nöjd med min insats.
+Jag tycker kursen har legat på en bra nivå, stundtals lite mycket att ta in och få igång tex scrutinizer, linters, phpdoc etc men kursen har givit ytterligare kunskap under bältet i objektorienterad kodning, enhetstestning och CI med scrutinizer vilket jag tycker har varit häftigt att se och jobba med.
+
+Kursen skulle jag varmt rekomendera till framtida kursare men även till de som vill lära sig mer om objektorienterad kodning med php i ramverket symfony, 8/10.

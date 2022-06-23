@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Card;
+
 /**
  * adds joker to deck
  */
