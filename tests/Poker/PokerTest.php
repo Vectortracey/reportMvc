@@ -120,29 +120,6 @@ class PokerTest extends TestCase
     }
 
     /**
-     * Test checkWinner method.
-     * Using ante and call method to draw 2 cards to the Player, Dealer and 5 cards to the board.
-     *
-     * Test if checkwinner is returning a array and test if the first element in array is a boolean.
-     * Test if second element in array is a string and if first element is true = Player winns test if
-     * odds is in element 3 in array and have higher or equal to 50 when put in 50 to checkWinner method.
-     */
-    public function testCheckWinner()
-    {
-        $die = new Poker();
-        $die->ante();
-        $die->call();
-        $checkWinner = $die->checkWinner(50);
-        $this->assertIsArray($checkWinner);
-        $this->assertIsBool($checkWinner[0]);
-        $this->assertIsString($checkWinner[1]);
-        if ($checkWinner[0]) {
-            $this->assertIsInt($checkWinner[2]);
-            $this->assertGreaterThanOrEqual(50, $checkWinner[2]);
-        }
-    }
-
-    /**
      * Test payOdds method.
      *
      * Test payOdds method returns a integer with value of 500 when put int 50 in bet amount and rule Four Of A Kind.
